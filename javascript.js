@@ -22,3 +22,30 @@ function getHumanChoice(){
     return humChoice.toUpperCase();
 }
 
+let humScore=0;
+let comScore=0;
+
+function playRound(){
+    compChoice=getComputerChoice();
+    humChoice=getHumanChoice();
+    if ((humChoice=="ROCK" && compChoice=="SCISSORS") || 
+        (humChoice=="PAPER" && compChoice=="ROCK") ||
+        (humChoice=="SCISSORS" && compChoice=="PAPER")) 
+        {
+            alert(`You won the round! ${humChoice} beats ${compChoice}`);
+            humScore++;
+            
+        }
+    else if(humChoice==compChoice)
+    {
+        alert("The round is a Tie!");
+    }
+    else
+    {
+        alert(`Computer won the round! ${compChoice} beats ${humChoice}`);
+        comScore++;
+    }
+    
+
+}
+
