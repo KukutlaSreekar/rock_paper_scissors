@@ -49,3 +49,24 @@ function playRound(){
 
 }
 
+function playGame(){
+    for(let i=0;i<5;i++)
+    {
+        playRound();
+        
+    }
+    if(humScore>comScore)
+    {
+        alert(`You Won The Game!! Your score: ${humScore}, Computer score: ${comScore}`);
+    }
+    else if(comScore>humScore)
+    {
+        alert(`Computer Won The Game. Your score: ${humScore}, Computer score: ${comScore}`);
+    }
+    else
+    {
+        alert("The game is a TIE!");
+    }
+}
+
+playGame();
