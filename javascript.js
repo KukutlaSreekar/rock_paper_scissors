@@ -16,3 +16,9 @@ function getComputerChoice(){
     return compChoice;
     
 }
+
+function getHumanChoice(){
+    let humChoice=prompt("Rock, Paper or Scissors?");
+    return humChoice.toUpperCase();
+}
+
